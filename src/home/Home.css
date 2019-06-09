@@ -1,0 +1,47 @@
+body {
+	background-color: #efdcbb;
+}
+#homePageLogo {
+	height: 1%;
+	width: 45%;
+	margin-left: 27%;
+	margin-top: 8%;
+	margin-bottom: 0;
+}
+h3 {
+	color: gray;
+	margin-left: 38%;
+	font-size: 200%;
+	margin-top: 0%;
+	font-family: 'Handlee', cursive;
+}
+.circle {
+	border-radius: 50%;
+	border: rgb(84, 80, 80) 8px solid;
+	height: 200px;
+	width: 200px;
+	background-color: rgb(238, 220, 223);
+	margin-left: 3%;
+	margin-right: 3%;
+	color: #e85790;
+	font-family: 'Handlee', cursive;
+	text-align: center;
+}
+h6 {
+	color: #e85790;
+	font-family: 'Handlee', cursive;
+	text-align: center;
+	margin-top: 30%;
+	font-size: 152%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+.circleContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 5%;
+	/* justify-content: space-evenly; */
+}
+span {
+	color: rgba(72, 145, 89, 0.892);
+}
