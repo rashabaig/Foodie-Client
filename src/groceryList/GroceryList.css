@@ -1,0 +1,26 @@
+.groceryContainerTitleContainer {
+	width: 100%;
+	border-radius: 4px;
+	margin: 0 auto;
+	background-color: rgb(70, 174, 129);
+}
+.groceryContainerTitle {
+	background-color: #46ae81;
+	color: white;
+	font-size: 25px;
+	margin-top: 0%;
+	margin: 0 auto;
+}
+.groceryParentContainer {
+	border: 5px solid rgb(70, 174, 129);
+	background-color: rgb(70, 174, 129);
+	border-radius: 18px;
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 10%;
+}
+.groceryContainer {
+	background-color: rgb(192, 247, 223);
+	height: 500px;
+	border-radius: 18px;
+}

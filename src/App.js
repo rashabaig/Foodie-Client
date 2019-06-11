@@ -10,36 +10,63 @@ import Account from '../src/account/Account';
 import LogIn from '../src/logIn/LogIn';
 import SignUp from '../src/signUp/SignUp';
 import Home from '../src/home/Home';
-
-const URL = 'http://localhost:3001/api/recipes/all';
+// import NewRecipe from '../src/newRecipe/NewRecipe';
+// const URL = `http://localhost:3001/api/foodie/recipes/all`;
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			recipeData: []
+			recipeData: [],
+			userID: '5cfea2319dd48c7608819202'
 		};
 	}
 
-	updateAllData = () => {
-		axios.get(URL).then((recipes) => {
-			console.log(recipes);
-			this.setState({ recipesData: recipes.data });
-		});
-	};
+	// updateAllData = () => {
+	// 	axios.get(URL).then((recipes) => {
+	// 		console.log(recipes);
+	// 		this.setState({ recipesData: recipes.data });
+	// 	});
+	// };
 
-	componentDidMount() {
-		this.updateAllData();
-	}
+	// componentDidMount() {
+	// 	this.updateAllData();
+	// }
 	render() {
 		return (
 			<div>
-				<Route exact path="/" render={(routerProps) => <Home {...routerProps} />} />
-				<Route exact path="/myrecipes" render={(routerProps) => <MyRecipes {...routerProps} />} />
-				<Route exact path="/grocerylist" render={(routerProps) => <GroceryList {...routerProps} />} />
-				<Route exact path="/mealplan" render={(routerProps) => <MealPlan {...routerProps} />} />
-				<Route exact path="/account" render={(routerProps) => <Account {...routerProps} />} />
-				<Route exact path="/login" render={(routerProps) => <LogIn {...routerProps} />} />
-				<Route exact path="/signup" render={(routerProps) => <SignUp {...routerProps} />} />
+				<Route exact path="/" render={(routerProps) => <Home {...routerProps} />} userID={this.state.userID} />
+				<Route
+					exact
+					path="/myrecipes"
+					render={(routerProps) => <MyRecipes {...routerProps} />}
+					userID={this.state.userID}
+				/>
+				<Route
+					exact
+					path="/grocerylist"
+					render={(routerProps) => <GroceryList {...routerProps} userID={this.state.userID} />}
+				/>
+				<Route
+					exact
+					path="/mealplan"
+					render={(routerProps) => <MealPlan {...routerProps} userID={this.state.userID} />}
+				/>
+				<Route
+					exact
+					path="/account"
+					render={(routerProps) => <Account {...routerProps} userID={this.state.userID} />}
+				/>
+				<Route
+					exact
+					path="/login"
+					render={(routerProps) => <LogIn {...routerProps} userID={this.state.userID} />}
+				/>
+				<Route
+					exact
+					path="/signup"
+					render={(routerProps) => <SignUp {...routerProps} userID={this.state.userID} />}
+				/>
+				{/* <Route exact path="/newRecipe" render={(routerProps) => <NewRecipe {...routerProps} />} /> */}
 			</div>
 		);
 	}

@@ -1,4 +1,4 @@
-body {
+.body {
 	background-color: #efdcbb;
 }
 #homePageLogo {
@@ -40,6 +40,9 @@ h6 {
 	display: flex;
 	justify-content: center;
 	margin-top: 5%;
+	background-color: #efdcbb;
+	padding-bottom: 200px;
+	height: 100vh;
 	/* justify-content: space-evenly; */
 }
 span {

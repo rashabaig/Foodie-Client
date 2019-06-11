@@ -1,0 +1,40 @@
+.form {
+	display: flex;
+	justify-content: center;
+	/* border: 7px solid rgb(57, 54, 54); */
+	border-radius: 8px;
+	margin: 0 auto;
+	width: 30%;
+	background-color: #47ac80ad;
+	box-shadow: 5px 5px 5px gray;
+	font-family: 'Quicksand', sans-serif;
+	padding-bottom: 2%;
+	margin-top: 10%;
+}
+.formTitle {
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Handlee', cursive;
+	margin-top: 4%;
+	margin-bottom: 4%;
+}
+input {
+	height: 30px;
+	width: 80%;
+	font-size: 20px;
+	margin-left: 9%;
+	margin-bottom: 2%;
+	border-radius: 8px;
+	text-align: center;
+	font-style: italic;
+	font-family: 'Handlee', cursive;
+}
+.button {
+	background-color: #494b4a;
+	color: white;
+}
+.button:hover {
+	background-color: #e58797;
+}

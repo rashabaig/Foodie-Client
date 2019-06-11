@@ -5,9 +5,9 @@ import logo from '../Foodie-Logo.png';
 class Home extends Component {
 	render() {
 		return (
-			<div>
+			<div className="body">
 				<Nav />
-				<body>
+				<body className="body">
 					<img id="homePageLogo" src={logo} />
 					<h3>Never Miss A Meal!</h3>
 				</body>
@@ -26,7 +26,7 @@ class Home extends Component {
 					</div>
 					<div className="circle">
 						<h6>
-							Generate Grocery List <br />
+							Automatic Grocery List <br />
 							<span>✔</span>
 						</h6>
 					</div>

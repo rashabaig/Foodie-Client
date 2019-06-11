@@ -1,0 +1,26 @@
+.recipeContainerTitleContainer {
+	width: 100%;
+	border-radius: 4px;
+	margin: 0 auto;
+	background-color: rgb(70, 174, 129);
+}
+.recipeContainerTitle {
+	background-color: #46ae81;
+	color: white;
+	font-size: 25px;
+	margin-top: 0%;
+	margin: 0 auto;
+}
+.recipeParentContainer {
+	border: 5px solid rgb(70, 174, 129);
+	background-color: rgb(70, 174, 129);
+	border-radius: 18px;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 10%;
+}
+.recipeContainer {
+	background-color: rgb(192, 247, 223);
+	height: 500px;
+	border-radius: 18px;
+}
