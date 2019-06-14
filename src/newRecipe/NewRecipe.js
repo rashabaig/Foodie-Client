@@ -5,7 +5,11 @@ class NewRecipe extends Component {
 	constructor() {
 		super();
 		this.state = {
-			recipeName: ''
+			recipeName: '',
+			prepTime: '',
+			cookTime: '',
+			servings: '',
+			image: ''
 		};
 		console.log(this.state.recipeName);
 		this.handleInput = this.handleInput.bind(this);
@@ -19,16 +23,15 @@ class NewRecipe extends Component {
 	}
 
 	handleSubmit() {
-		const URL = `http://localhost:3001/api/foodie/recipes/newRecipe/5cfea2319dd48c7608819202`;
+		const URL = `http://localhost:3001/api/foodie/recipes/newRecipe/5d02ee248669adac92ca7908`;
 		console.log(URL);
 		axios
 			.put(URL, {
-				recipeName: this.state.recipeName
-				// prepTime: this.state.prepTime,
-				// cookTime: this.state.cookTime,
-				// servings: this.state.servings,
-				// ingredients: this.state.ingredients,
-				// instructions: this.state.instructions
+				recipeName: this.state.recipeName,
+				prepTime: this.state.prepTime,
+				cookTime: this.state.cookTime,
+				servings: this.state.servings,
+				image: this.state.image
 			})
 			.then(function(response) {
 				console.log(response);
@@ -48,6 +51,34 @@ class NewRecipe extends Component {
 							placeholder=" recipe name"
 							className="signInFirstNameField"
 							name="recipeName"
+							onChange={this.handleInput}
+						/>
+						<input
+							type="text"
+							placeholder=" preparation time"
+							className="signInFirstNameField"
+							name="prepTime"
+							onChange={this.handleInput}
+						/>
+						<input
+							type="text"
+							placeholder=" cook time"
+							className="signInFirstNameField"
+							name="cookTime"
+							onChange={this.handleInput}
+						/>
+						<input
+							type="text"
+							placeholder="number of servings"
+							className="signInFirstNameField"
+							name="servings"
+							onChange={this.handleInput}
+						/>
+						<input
+							type="text"
+							placeholder="image url"
+							className="signInFirstNameField"
+							name="image"
 							onChange={this.handleInput}
 						/>
 						<input className="button" type="submit" value="Submit" onClick={this.handleSubmit} />

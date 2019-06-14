@@ -23,4 +23,34 @@
 	background-color: rgb(192, 247, 223);
 	height: 500px;
 	border-radius: 18px;
+	/* display: flex;
+	justify-content: space-around; */
+}
+.red {
+	/* background-color: white; */
+	height: 150px;
+	width: 150px;
+	/* display: flex;
+	justify-content: center; */
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.534);
+}
+.img {
+	height: 100%;
+	width: 130%;
+	border-radius: 8px;
+	/* margin-left: 5%; */
+	/* margin-right: 5%; */
+	margin-top: 3%;
+}
+.recipeTag {
+	margin-top: 2%;
+	margin-left: 20%;
+	width: 100%;
+}
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }

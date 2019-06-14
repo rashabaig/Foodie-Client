@@ -8,32 +8,48 @@ class MyRecipes extends Component {
 	constructor() {
 		super();
 		this.state = {
-			userRecipes: [],
-			selectRecipe: ''
+			userRecipes: []
 		};
 	}
 
 	componentDidMount() {
-		console.log('ViewAllNotes: componentDidMount');
-		axios.get(`'http://localhost:3001/api/foodie/recipes/all/${this.props.userID}`).then((userRecipes) => {
+		console.log('ViewAllRecipes');
+		axios.get('http://localhost:3001/api/foodie/recipes/all/5d02ee248669adac92ca7908').then((userRecipes) => {
 			console.log(userRecipes);
 			this.setState({ userRecipes: userRecipes.data });
+			console.log(userRecipes);
 		});
 	}
 
 	render() {
-		return (
-			<div>
-				<UserNav />
-				<NewRecipe />
-				<div className="recipeParentContainer">
-					<div className="recipeContainerTitleContainer">
-						<h4 className="recipeContainerTitle">My Recipes</h4>
+		console.log('working');
+		console.log(this.state.userRecipes);
+		if (this.state.userRecipes) {
+			let allRecipes = this.state.userRecipes.map((recipe, i) => {
+				return (
+					<div className="red">
+						<img className="img" src={recipe.image} />
+						<h4 className="recipeTag">{recipe.recipeName}</h4>
 					</div>
-					<div className="recipeContainer" />
+				);
+			});
+			return (
+				<div>
+					<UserNav />
+					<NewRecipe />
+					<div className="recipeParentContainer">
+						<div className="recipeContainerTitleContainer">
+							<h4 className="recipeContainerTitle">My Recipes</h4>
+						</div>
+						<div className="recipeContainer">
+							<div className="flex">{allRecipes}</div>
+						</div>
+					</div>
 				</div>
-			</div>
-		);
+			);
+		} else {
+			return <div />;
+		}
 	}
 }
 
