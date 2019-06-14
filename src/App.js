@@ -17,18 +17,18 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			userRecipes: [],
-			userID: '5d02ee248669adac92ca7908'
+			userRecipes: []
+			// userID: '5d02ee248669adac92ca7908'
 		};
 	}
 
-	componentDidMount() {
-		console.log('ViewAllMedications: componentDidMount');
-		axios.get('http://localhost:3001/api/foodie/recipes/all/5cfea2319dd48c7608819202').then((userRecipes) => {
-			console.log(userRecipes);
-			this.setState({ userRecipes: userRecipes.data });
-		});
-	}
+	// componentDidMount() {
+	// 	console.log('ViewAllMedications: componentDidMount');
+	// 	axios.get('http://localhost:3001/api/foodie/recipes/all/5cfea2319dd48c7608819202').then((userRecipes) => {
+	// 		console.log(userRecipes);
+	// 		this.setState({ userRecipes: userRecipes.data });
+	// 	});
+	// }
 
 	updateAllData = () => {
 		axios.get(URL).then((recipes) => {
