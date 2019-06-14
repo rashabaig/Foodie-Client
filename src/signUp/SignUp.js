@@ -25,7 +25,7 @@ class SignUp extends Component {
 	}
 
 	handleSubmit() {
-		const URL = 'http://localhost:3001/api/foodie/newUser';
+		const URL = 'https://foodie---app.herokuapp.com/api/foodie/newUser';
 		axios
 			.post(URL, {
 				firstName: this.state.firstName,
