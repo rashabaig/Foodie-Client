@@ -23,7 +23,7 @@ class NewRecipe extends Component {
 	}
 
 	handleSubmit() {
-		const URL = `http://localhost:3001/api/foodie/recipes/newRecipe/5d02ee248669adac92ca7908`;
+		const URL = `https://foodie---app.herokuapp.com/api/foodie/recipes/newRecipe/5d03c73ba5c54e0017170214`;
 		console.log(URL);
 		axios
 			.put(URL, {

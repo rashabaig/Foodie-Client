@@ -14,11 +14,13 @@ class MyRecipes extends Component {
 
 	componentDidMount() {
 		console.log('ViewAllRecipes');
-		axios.get('http://localhost:3001/api/foodie/recipes/all/5d02ee248669adac92ca7908').then((userRecipes) => {
-			console.log(userRecipes);
-			this.setState({ userRecipes: userRecipes.data });
-			console.log(userRecipes);
-		});
+		axios
+			.get('https://foodie---app.herokuapp.com/api/foodie/recipes/all/5d03c73ba5c54e0017170214')
+			.then((userRecipes) => {
+				console.log(userRecipes);
+				this.setState({ userRecipes: userRecipes.data });
+				console.log(userRecipes);
+			});
 	}
 
 	render() {
