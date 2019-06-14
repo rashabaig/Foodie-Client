@@ -26,7 +26,7 @@ class Home extends Component {
 					</div>
 					<div className="circle">
 						<h6>
-							Automatic Grocery List <br />
+							Automated Grocery List <br />
 							<span>✔</span>
 						</h6>
 					</div>
