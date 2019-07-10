@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import axios from 'axios';
-import logo from '../src/Foodie-Logo.png';
 import './App.css';
 import MyRecipes from '../src/myRecipes/MyRecipes';
 import GroceryList from '../src/groceryList/GroceryList';
@@ -11,8 +10,6 @@ import LogIn from '../src/logIn/LogIn';
 import SignUp from '../src/signUp/SignUp';
 import Home from '../src/home/Home';
 import ViewRecipe from '../src/home/Home';
-// import NewRecipe from '../src/newRecipe/NewRecipe';
-// const URL = `http://localhost:3001/api/foodie/recipes/all`;
 class App extends Component {
 	constructor() {
 		super();
@@ -31,16 +28,6 @@ class App extends Component {
 			});
 	}
 
-	updateAllData = () => {
-		axios.get(URL).then((recipes) => {
-			console.log(recipes);
-			this.setState({ recipesData: recipes.data });
-		});
-	};
-
-	componentDidMount() {
-		this.updateAllData();
-	}
 	render() {
 		return (
 			<div>

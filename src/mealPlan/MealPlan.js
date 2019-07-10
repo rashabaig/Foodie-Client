@@ -4,7 +4,7 @@ import '../mealPlan/MealPlan.css';
 class MealPlan extends Component {
 	render() {
 		return (
-			<div class="main">
+			<div className="main">
 				<UserNav />
 				<body className="white">
 					<div className="daysContainerTitleContainer">

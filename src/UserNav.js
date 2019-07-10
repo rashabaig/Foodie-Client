@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../src/Foodie-Logo.png';
-import { Route, Switch, Link } from 'react-router-dom';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 class UserNav extends Component {
 	render() {
 		return (

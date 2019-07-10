@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Nav from '../Nav';
-import signup from '../signUp/SignUp.css';
 
 class LogIn extends Component {
 	constructor() {

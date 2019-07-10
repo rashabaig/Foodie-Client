@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../src/Foodie-Logo.png';
-import { Route, Switch, Link } from 'react-router-dom';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../src/Nav.css';
 class Nav extends Component {
 	render() {

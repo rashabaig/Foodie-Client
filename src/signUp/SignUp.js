@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Nav from '../Nav';
-import signup from '../signUp/SignUp.css';
+import '../signUp/SignUp.css';
 class SignUp extends Component {
 	constructor() {
 		super();
